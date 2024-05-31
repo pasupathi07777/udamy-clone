@@ -14,10 +14,15 @@ body{
     align-items: center;
     border-bottom: 1px solid;
     gap: 10px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 2;
 }
 .navbar__s1__title{
     color: #A435F0;
     text-transform: capitalize;
+    cursor: pointer;
    
 
 
@@ -30,6 +35,7 @@ body{
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 .navbar__s2 input{
     border: none;
@@ -46,6 +52,29 @@ body{
     display: flex;
     gap: 10px;
     align-items: center;
+    cursor: pointer;
+}
+.my-learning{
+    position: relative;
+    cursor: pointer;
+}
+.mylearning-pop{
+    width: 150px;
+    position: absolute;
+    border: 1px solid;
+    top: 25px;
+    right: 0;
+    padding: 10px;
+    border-radius: 2px;
+   
+  
+    background-color: #fff;
+    display: none;
+
+}
+.my-learning:hover .mylearning-pop{
+    display: block;
+
 }
 
 .categories{
@@ -55,31 +84,77 @@ body{
     padding: 10px;
     justify-content: space-around;
     border-bottom: 1px solid;
+    z-index: 1;
 }
 .categories__para{
     background-color: #A435F0;
     color: #fff;
     padding: 5px 10px;
     border-radius: 20px;
+    z-index: 1;
+    cursor: pointer;
 }
 .sale-imege{
     width: 100%;
     cursor: pointer;
+    position: relative;
    
 }
 .sale-imege img{
     width: 100%;
     min-height: 250px;
 }
+.sale-image__offer{
+    position: absolute;
+    width: 30%;
+    height: fit-content;
+    background-color: #fff;
+    color: black;
+    padding: 10px;
+    border-radius: 2px;
+    /* border: 1px solid; */
+    top: 10%;
+    left: 5%;
+    text-transform: capitalize;
+
+}
+.sale-image__offer h2{
+    display: inline;
+
+}
+.sale-image__offer__more-btn{
+    color: blue;
+    font-weight: 600;
+}
+.sale-image__offer p{
+    display: none;
+    
+}
+.sale-image__offer:hover .sale-image__offer__title{
+    display: none;
+}
+.sale-image__offer:hover .sale-image__offer__para{
+   display: block;
+}
+.sale-image__offer:hover .sale-image__offer__more-btn{
+   display: none;
+}
+
+
+
 
 .recommended{
     padding: 10px;
+}
+.recommended p{
+    text-transform: capitalize;
 }
 .recommended__container{
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 20px;
 
 }
 .cource-cart{
