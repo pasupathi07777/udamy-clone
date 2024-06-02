@@ -47,11 +47,13 @@ body {
     width: 100%;
     height: 100%;
     font-size: 16px;
+  
 
 }
 
 .navbar__s2 input:focus {
     outline: none;
+    display: none;
 
 }
 
@@ -60,6 +62,16 @@ body {
     gap: 10px;
     align-items: center;
     cursor: pointer;
+}
+.navbar__s4{
+    width:25px ;
+    height: 25px;
+    display: none;
+    cursor: pointer;
+}
+.navbar__s4 img{
+    width: 100%;
+    height: 100%;
 }
 
 .my-learning {
@@ -169,6 +181,8 @@ body {
     display: block;
    
 
+   
+
 }
 .sale-image__offer:hover .sale-image__offer__more-btn {
     display: none;
@@ -192,29 +206,6 @@ body {
 
 }
 
-/* @keyframes flip {
-    0% {
-        opacity: 0;
-        transform: rotatey(0deg);
-    }
-
-    100% {
-        opacity: 1;
-        transform: rotatey(180deg);
-    }
-
-}
-@keyframes clip {
-    0% {
-        transform: rotatey(0deg);
-    }
-
-    100% {
-        transform: rotatey(180deg);
-        opacity: 1;
-    }
-
-} */
 
 
 
@@ -231,18 +222,21 @@ body {
 .recommended__container {
     margin-top: 10px;
     display: flex;
+    
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+    /* justify-content: space-between; */
+    gap: 10px;
 
 }
 
 .cource-cart {
-    width: 250px;
-    /* height: 200px; */
+    flex-basis: 20%;
+    height: fit-content;
+   
     text-transform: capitalize;
     transition: 0.2s;
     cursor: pointer;
+    flex-grow: 1;
 
 }
 
@@ -300,7 +294,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
 }
 
 .footer {
@@ -339,10 +333,22 @@ body {
     .navbar__s3 {
         display: none;
     }
+    .navbar__s2{
+        display: flex;
+    }
+    .categories{
+        display: none;
+    }
+    
 
 }
 
-@media (max-width:518px) {
+
+@media (max-width:576px) {
+    body{
+        font-size: 10px;
+
+    }
     .recommended__container {
         justify-content: center;
     }
@@ -350,5 +356,22 @@ body {
     .popular__container {
         justify-content: center;
     }
+    .cource-cart{
+        flex-basis: 40%;
+    }
+    .navbar__s3 {
+        display: none;
+    }
+    
+    .navbar__s4{
+        display: block;
+    }
+    .navbar__s2{
+        display: none;
+    }
+    .categories{
+        display: none;
+    }
+    
 
 }
